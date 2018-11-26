@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="cursos.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main2.css">
+    <title>Carga Horas</title>
+</head>
+
+<body>
+    <div id="bodyWrapper">
+        <div class="noSeleccionable logoIndustrial"><img src="logo.png" class="indu" width="120" height="150"></div>
+        <div class="contenido">
+            <div class="contenidoItem">
+                <div class="cuboContenido" id="quinto">
+                    <div id="quinto_titulo" class="noSeleccionable cuboContenido_titulo">
+                        5to
+                    </div>
+                    <div id="alumnosQuinto" class="cuboContenido_contenido">
+                        <table class="table table-light table-sm table-hover">
+                            <thead>
+                                <th><input type="checkbox" id="checkboxTodos5to"></th>
+                                <th>Nombre</th>
+                                <th>HT</th>
+                            </thead>
+                            <tbody class="tablaCurso" id="tablaQuinto">
+                                <tr onclick='clicktr(this);' id='$idAlumno'><td><input type='checkbox' class='checkboxAlumnosQuinto' id='$idAlumno'></td><td>$nombreAlumno</td><td>$horasTotales</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="contenidoItem">
+                <div class="cuboContenido" id="sexto">
+                    <div id="sexto_titulo" class="noSeleccionable cuboContenido_titulo">
+                        6to
+                    </div>
+                    <div id="alumnosSexto" class="cuboContenido_contenido">
+                        <table class="table table-light table-sm table-hover">
+                            <thead>
+                                <th><input type="checkbox" id="checkboxTodos6to"></th>
+                                <th>Nombre</th>
+                                <th>HT</th>
+                            </thead>
+                            <tbody id="tablaSexto"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <button id="botonAgregarHoras">Agregar Horas</button>
+        </div>
+    </div>
+</body>
+
+</html>

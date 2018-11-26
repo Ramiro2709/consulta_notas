@@ -1,0 +1,116 @@
+<html>
+
+<!--
+Cambios Lucas
+Las opciones del menu ahora son botones
+Agregue la clase menu para arreglar el problema del margen en las notas y
+contenidoWrapper para el padding de todo en la plantilla del menu
+-->
+
+<head>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="ISO-8859-1">
+    <title>Consultar Alumno</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!--fuente-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--JQuery-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+    <!--Local-->
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+    <div id="superBodyWrapper">
+
+        <div class="bodyWrapper" id="bodyWrapperIngresar">
+            <div id="formulario">
+                <div id="tituloFormulario">
+                    Buscar Alumno
+                </div>
+                <div id="inputs">
+                    <form action="" method="">
+
+                        <div class="input-group mb-3">
+                            <input type="number" maxlength="8" tabindex="1" placeholder="DNI" name="dni" class="form-control inputFormulario"
+                                id="inputDNI" value="39204535">
+
+                            <div class="input-group-append">
+                                <button class="botonLimpiar btn-danger btn" tabindex="4" type="button" id="botonLimpiarDNI">X</button>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="number" maxlength="4" tabindex="2" value="7314" placeholder="Legajo" name="legajo" class="form-control inputFormulario"
+                                id="inputLegajo">
+
+                            <div class="input-group-append">
+                                <button class="botonLimpiar btn btn-danger" tabindex="5" type="button" id="botonLimpiarLegajo">X</button>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-warning" id="alert_soloNumero" role="alert">
+                            Ingrese solo números
+                        </div>
+                        <div class="alert alert-danger" id="alert_noSeEncontro" role="alert">
+                            No se encontro ese DNI
+                        </div>
+
+                        <div id="inputs_boton_grupo" class="input-group">
+                            <button id="inputBoton" class="btn btn-primary boton-centro" tabindex="3" onclick="" type="button">Buscar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="bodyWrapper hide" id="bodyWrapperYaRegistrado">
+            <div class="barraSuperior bodyWrapper_hijo">
+                <button class="botonVolver btn btn-outline-info" id="botonVolver">
+                    <div class="material-icons flechaVolver">arrow_back_ios</div>
+                </button>
+
+                <span class="infoAlumno">
+                    <div class="infoAlumno_nombre">Nombre: </div>
+                    <div class="infoAlumno_curso">Curso: </div>
+                </span>
+            </div>
+            
+            <div class="bodyWrapper_hijo menu" id="notas">
+                <div id="notas_contenido" class="contenidoWrapper"></div>
+            </div>
+<!--
+            <div class="bodyWrapper_hijo menu" id="menu">
+                <div id="menu_contenido" class="contenidoWrapper">
+
+                    <button id="menu_notas" tabindex="1" class="btn btn-danger opcionesMenu ">
+                        Notas
+                    </button>
+
+                    <button id="menu_info" tabindex="1" class="btn btn-primary opcionesMenu ">
+                        Info
+                    </button>
+
+                </div>
+            </div>
+-->
+            
+<!--
+            <div class="bodyWrapper_hijo menu" id="info">
+                <div id="info_contenido" class="contenidoWrapper"></div>
+            </div>
+        </div>
+-->
+        <div id="elDivConTodaLaInfo"></div>
+    </div>
+</body>
+
+</html>
