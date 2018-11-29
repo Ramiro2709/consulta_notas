@@ -191,6 +191,7 @@ function aEstadoListo() {
 
 function ingresar() {
     var valor_dni = $("#inputDNI").val();   
+    
     $("#elDivConTodaLaInfo").load("Cargas_notas.php", { "DNI": valor_dni });
     
     var iteracionBusqueda = setInterval(() => {
@@ -204,6 +205,8 @@ function ingresar() {
             cargarNotas();
             $("#alert_noSeEncontro").hide();
             clearInterval(iteracionBusqueda);
+            $("#DNI_form").val($("#inputDNI").val()); ///////////// 
+            console.log("Val dni: " + $("#DNI_form").val());
         }
         else if (estadoDatos == "false") {
             $("#alert_noSeEncontro").slideDown(velocidadSlide);
