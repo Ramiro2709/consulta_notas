@@ -207,6 +207,8 @@ function ingresar() {
             clearInterval(iteracionBusqueda);
             $("#DNI_form").val($("#inputDNI").val()); ///////////// 
             console.log("Val dni: " + $("#DNI_form").val());
+            console.log("establecer_sesion.php");
+            //$("#sesion").load("establecer_sesion.php", { "DNI": valor_dni }); ///////
         }
         else if (estadoDatos == "false") {
             $("#alert_noSeEncontro").slideDown(velocidadSlide);

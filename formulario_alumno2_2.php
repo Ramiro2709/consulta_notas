@@ -60,6 +60,7 @@ while ( $array_query = mysql_fetch_array($res_datos))
     <button type="submit" class="botonVolver btn btn-outline-info" id="botonVolver">
         <div class="material-icons flechaVolver">arrow_back_ios</div>
     </button>
+    <input type="text" hidden id="boton_volver" name="boton_volvern" value="true">
 </form>  
 
         <table class="table table-bordered">
