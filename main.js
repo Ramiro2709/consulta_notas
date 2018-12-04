@@ -31,6 +31,7 @@ var tiempoIteracion = 100;
 
 $(document).ready(() => {
     actualizarVista();
+    $("#sesion").load("establecer_sesion.php"); //////////******* */
 
     $(".alert").hide();
     $("#container_iconoCargando").hide();
@@ -190,9 +191,13 @@ function aEstadoListo() {
 }
 
 function ingresar() {
-    var valor_dni = $("#inputDNI").val();   
+
     
-    $("#elDivConTodaLaInfo").load("Cargas_notas.php", { "DNI": valor_dni });
+
+    var valor_dni = $("#inputDNI").val();   
+    var valor_legajo = $("#inputLegajo").val();
+    
+    $("#elDivConTodaLaInfo").load("Cargas_notas.php", { "DNI": valor_dni , "Legajo": valor_legajo });
     
     var iteracionBusqueda = setInterval(() => {
         var estadoDatos = $("#datosPasados_estadoDatos").html();

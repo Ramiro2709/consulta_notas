@@ -24,16 +24,22 @@ a array del jquery
     -->
 </head>
 <?php
+session_start();
 //// **** Conecxion con base de datos "datos_alumnos"
 include "Conexion_base.php";
 //// **** Toma el DNI ingresado por el POST desde el html
 $DNI = $_POST['DNI'];
+$Legajo = $_POST['Legajo'];
+
+$_SESSION['DNI'] = $DNI;
+$_SESSION['Legajo'] = $Legajo;
+
 //$DNI = 42915333;
 //44955487
 //42915333
 
 //// **** Consulta, obtiene id del alumno en base a DNI ingresado
-$id_alumno = mysql_query("SELECT id,alumnon,curson FROM valumnos WHERE documento=$DNI", $link);
+$id_alumno = mysql_query("SELECT id,alumnon,curson FROM valumnos WHERE documento=$DNI AND legajo=$Legajo", $link);
 //// **** Covierte el id alumno a array
 $id_alumno_array = mysql_fetch_array($id_alumno);
 

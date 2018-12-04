@@ -26,11 +26,18 @@
 </head>
   
 <?php
+session_start();
 $link = mysql_connect('localhost','root');
 mysql_select_db('practica',$link);
 $DNI = $_POST['DNI_form_name'];
 $query_datos = "SELECT * FROM valumnos WHERE documento=$DNI";
 $res_datos = mysql_query($query_datos);
+
+if (isset($_POST['volvio']))
+{
+    $_SESSION['volvio'] = "true";
+    header('Location: index.html');
+}
 
 while ( $array_query = mysql_fetch_array($res_datos))
 {
@@ -56,11 +63,11 @@ while ( $array_query = mysql_fetch_array($res_datos))
         <input type="submit" class="botonVolver btn btn-outline-info material-icons flechaVolver" id="botonVolver" value="arrow_back_ios">
     </form>
 -->
-<form name="" action="index.html" method="POST" id="formulario">
+<form name="" action="formulario_alumno2_2.php" method="POST" id="formulario">
     <button type="submit" class="botonVolver btn btn-outline-info" id="botonVolver">
         <div class="material-icons flechaVolver">arrow_back_ios</div>
     </button>
-    <input type="text" hidden id="boton_volver" name="boton_volvern" value="true">
+    <input type="text" hidden name="volvio" value="true">
 </form>  
 
         <table class="table table-bordered">

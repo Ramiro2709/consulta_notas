@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['DNI'] = $_POST['DNI'];
-echo $_SESSION['DNI'];
-
+$DNI = $_SESSION['DNI'];
+$Legajo = $_SESSION['Legajo'];
+//echo 
 ?>
