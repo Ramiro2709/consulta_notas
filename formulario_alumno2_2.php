@@ -46,7 +46,7 @@ while ( $array_query = mysql_fetch_array($res_datos))
     if ($array_query['sexoid'] == 1){
         $array_datos['sexo'] = "Masculino";
     } else {
-        $array_datos['sexo'] = "Femeino";
+        $array_datos['sexo'] = "Femenino";
     }
     $array_datos['curso'] = $array_query['curson'];
     $array_datos['pre'] = $array_query['preceptorn'];
