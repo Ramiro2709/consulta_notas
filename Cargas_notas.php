@@ -1,20 +1,3 @@
-<!--
-Cambios 1 Ramiro
-$DNI ahora recibe un POST desde el index
-
-Lucas
-puse alumnon entre ''
-
-Ramiro 2
-Si no existe el DNI ($id_alumno_array == null) tira un alert rancio  y no se cargan las notas, falta hacer que no pueda entrar al menu
-
-Ramiro 3
-Agrege jquery que solo llama funcion de cargar el menu si encuentra un alumno
-
-Ramrio 4
-Ahora agrega los datos a varaibles de Jquery, falta hacer foreach que agrege los notas
-a array del jquery
--->
 
 <head>
     <!--
